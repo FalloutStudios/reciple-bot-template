@@ -1,0 +1,22 @@
+Time: 1657724094076
+File: latest.log
+====================
+[INFO - Main] Reciple Client v2.0.1 is starting...
+[INFO - Main] Loading Modules from modules
+[ERROR - Main] Failed to load module example.js
+[ERROR - Main] Error: Module versions is not defined or unsupported; supported versions: 2.0.0
+[ERROR - Main]     at /home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/modules.js:45:27
+[ERROR - Main]     at Generator.next (<anonymous>)
+[ERROR - Main]     at /home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/modules.js:8:71
+[ERROR - Main]     at new Promise (<anonymous>)
+[ERROR - Main]     at __awaiter (/home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/modules.js:4:12)
+[ERROR - Main]     at loadModules (/home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/modules.js:25:12)
+[ERROR - Main]     at RecipleClient.<anonymous> (/home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/classes/RecipleClient.js:49:61)
+[ERROR - Main]     at Generator.next (<anonymous>)
+[ERROR - Main]     at /home/runner/Reciple-Bot-Template/node_modules/reciple/bin/reciple/classes/RecipleClient.js:9:71
+[ERROR - Main]     at new Promise (<anonymous>)
+[WARN - Main] Logged in as Axis Testing#2851!
+[INFO - Main] 0 modules loaded.
+[INFO - Main] 0 message commands loaded.
+[INFO - Main] 0 interaction commands loaded.
+[WARN - Main] No guilds were specified for interaction commands. Registered interaction commands globally.

@@ -1,0 +1,13 @@
+{
+  "name": "reciple-bot-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npx reciple start"
+  },
+  "author": "",
+  "dependencies": {
+    "discord.js": "^13.8.1",
+    "reciple": "^2.0.2"
+  }
+}
