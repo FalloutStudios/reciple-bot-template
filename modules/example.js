@@ -1,15 +1,15 @@
-const { MessageCommandBuilder, InteractionCommandBuilder } = require('reciple');
+const { MessageCommandBuilder, SlashCommandBuilder } = require('reciple');
 
 class Example {
   constructor() {
-    this.versions = ['^3.1.4'];
+    this.versions = '^4.0.0';
     this.commands = [
       new MessageCommandBuilder()
         .setName('ping')
         .setCooldown(10000)
         .setDescription('Pong!')
         .setExecute(execute => execute.message.reply("Pong!")),
-      new InteractionCommandBuilder()
+      new SlashCommandBuilder()
         .setName('ping')
         .setCooldown(10000)
         .setDescription('Pong!')
