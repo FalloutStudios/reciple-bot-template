@@ -1,17 +1,17 @@
 const { MessageCommandBuilder, InteractionCommandBuilder } = require('reciple');
 
 class Example {
-  constructor () {
-    this.versions = ['2.0.2'];
+  constructor() {
+    this.versions = ['^3.1.4'];
     this.commands = [
       new MessageCommandBuilder()
         .setName('ping')
-        .setCooldown(1000)
+        .setCooldown(10000)
         .setDescription('Pong!')
         .setExecute(execute => execute.message.reply("Pong!")),
       new InteractionCommandBuilder()
         .setName('ping')
-        .setCooldown(1000)
+        .setCooldown(10000)
         .setDescription('Pong!')
         .setExecute(execute => execute.interaction.reply("Pong!"))
     ];
