@@ -8,6 +8,6 @@
   "author": "",
   "dependencies": {
     "discord.js": "^14.1.2",
-    "reciple": "^4.1.2"
+    "reciple": "^5.0.0"
   }
 }
