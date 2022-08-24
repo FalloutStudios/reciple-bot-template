@@ -2,7 +2,7 @@ const { MessageCommandBuilder, SlashCommandBuilder } = require('reciple');
 
 class Example {
   constructor() {
-    this.versions = '^5.0.0';
+    this.versions = '^5.3.0';
     this.commands = [
       new MessageCommandBuilder()
         .setName('ping')
