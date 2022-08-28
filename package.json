@@ -3,15 +3,15 @@
   "version": "3.0.0",
   "description": "Simple discord bot template",
   "scripts": {
-    "start": "npx reciple start",
+    "start": "npx reciple",
     "install": "npx rmm install"
   },
   "author": "",
   "dependencies": {
-    "discord.js": "^14.2.0",
+    "discord.js": "^14.3.0",
     "reciple": "^5.3.0"
   },
   "devDependencies": {
-    "@falloutstudios/rmm": "^3.3.0"
+    "@falloutstudios/rmm": "^3.3.3"
   }
 }
