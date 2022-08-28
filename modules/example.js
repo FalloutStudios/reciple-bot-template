@@ -1,19 +1,24 @@
-const { MessageCommandBuilder, SlashCommandBuilder } = require('reciple');
+const { MessageCommandBuilder, SlashCommandBuilder, CommandBuilderType } = require('reciple');
 
 class Example {
   constructor() {
-    this.versions = '^5.3.0';
+    this.versions = '^5.4.0';
     this.commands = [
-      new MessageCommandBuilder()
-        .setName('ping')
-        .setCooldown(10000)
-        .setDescription('Pong!')
-        .setExecute(execute => execute.message.reply("Pong!")),
-      new SlashCommandBuilder()
-        .setName('ping')
-        .setCooldown(10000)
-        .setDescription('Pong!')
-        .setExecute(execute => execute.interaction.reply("Pong!"))
+      {
+        type: CommandBuilderType.MessageCommand,
+        name: 'ping',
+        description: 'Pong!',
+        options: [],
+        cooldown: 1000 * 10,
+        excute: e => e.message.reply("Pong!")
+      },
+      {
+        type: CommandBuilderType.SlashCommand,
+        name: 'ping',
+        description: 'Pong!',
+        cooldown: 1000 * 10,
+        execute: e => e.interaction.reply("Pong!")
+      }
     ];
   }
 
