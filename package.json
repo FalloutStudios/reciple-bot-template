@@ -9,7 +9,7 @@
   "author": "",
   "dependencies": {
     "discord.js": "^14.3.0",
-    "reciple": "^5.4.0"
+    "reciple": "^5.4.4"
   },
   "devDependencies": {
     "@falloutstudios/rmm": "^3.3.3"
