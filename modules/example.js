@@ -10,7 +10,7 @@ module.exports = {
       cooldown: 1000 * 10,
       execute: e => e.message.reply("Pong!"),
       halt: e => {
-        if(e.reason == CommandHaltReason.Error) {
+        if (e.reason == CommandHaltReason.Error) {
           e.executeData.message.reply(String(e.error));
           return true;
         }
@@ -23,8 +23,8 @@ module.exports = {
       cooldown: 1000 * 10,
       execute: e => e.interaction.reply("Pong!"),
       halt: e => {
-        if(e.reason == CommandHaltReason.Error) {
-           e.executeData.interaction.reply(String(e.error));
+        if (e.reason == CommandHaltReason.Error) {
+          e.executeData.interaction.reply(String(e.error));
           return true;
         }
       }
