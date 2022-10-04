@@ -114,4 +114,4 @@ modulesFolder: 'modules'
 disableVersionCheck: false
 
 # Current version
-version: ^5.5.2
+version: ^5.5.6
