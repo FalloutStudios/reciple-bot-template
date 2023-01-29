@@ -1,10 +1,10 @@
-const { CommandBuilderType, CommandHaltReason } = require('reciple');
+const { CommandType, CommandHaltReason } = require('reciple');
 
 module.exports = {
-  versions: '^5.4.2',
+  versions: '^6',
   commands: [
     {
-      type: CommandBuilderType.MessageCommand,
+      type: CommandType.MessageCommand,
       name: 'ping',
       description: 'Pong!',
       cooldown: 1000 * 10,
@@ -17,7 +17,7 @@ module.exports = {
       }
     },
     {
-      type: CommandBuilderType.SlashCommand,
+      type: CommandType.SlashCommand,
       name: 'ping',
       description: 'Pong!',
       cooldown: 1000 * 10,
@@ -32,7 +32,6 @@ module.exports = {
   ],
   onStart(client) {
     client.logger.log("Module started");
-
     return true;
   },
   onLoad(client) {

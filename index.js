@@ -1,0 +1,1 @@
+console.log(`Open Shell tab and run "npm run start" to start.`);
