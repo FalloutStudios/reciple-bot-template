@@ -1,17 +1,11 @@
 {
-  "name": "reciple-bot-template",
-  "version": "3.0.0",
-  "description": "Simple discord bot template",
+  "name": "reciple-app",
+  "private": true,
   "scripts": {
-    "start": "npx reciple",
-    "install": "npx rmm install"
+    "start": "npx reciple"
   },
-  "author": "",
   "dependencies": {
     "discord.js": "^14.7.1",
-    "reciple": "^6.0.4"
-  },
-  "devDependencies": {
-    "@falloutstudios/rmm": "^3.3.4"
+    "reciple": "^7.0.2"
   }
 }
