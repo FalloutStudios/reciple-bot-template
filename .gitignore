@@ -21,6 +21,7 @@ lib-cov
 
 # Docs files
 docs.json
+reciple.yml
 
 # Coverage directory used by tools like istanbul
 coverage

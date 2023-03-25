@@ -1,11 +1,16 @@
 {
   "name": "reciple-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "npx reciple"
+    "start": "npx reciple",
+    "test": "nodemon ./node_modules/reciple/bin/bin.mjs"
   },
   "dependencies": {
-    "discord.js": "^14.7.1",
-    "reciple": "^7.0.2"
+    "discord.js": "^14.8.0",
+    "reciple": "^7.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
