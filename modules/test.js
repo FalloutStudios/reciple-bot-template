@@ -1,40 +1,53 @@
-const { ContextMenuCommandBuilder, MessageCommandBuilder, SlashCommandBuilder } = require('reciple');
-const { ApplicationCommandType } = require('discord.js');
+import { ContextMenuCommandBuilder, MessageCommandBuilder, SlashCommandBuilder } from 'reciple';
+import { ApplicationCommandType, AttachmentBuilder } from 'discord.js';
 
 /**
  * @type {import('reciple').RecipleModuleScript}
  */
-module.exports = {
-    versions: ['^7'], // Module supports reciple client version 7
-    commands: [
-        // Right click a message to execute command
-        new ContextMenuCommandBuilder()
-            .setName(`Test Context Menu`)
-            .setType(ApplicationCommandType.Message)
-            .setExecute(async data => data.interaction.reply(`Hello!`)),
+export default {
+  versions: ['^7'], // Module supports reciple client version 7
+  commands: [
+    // Right click a message to execute command
+    new ContextMenuCommandBuilder()
+      .setName(`Avatar`)
+      .setType(ApplicationCommandType.User)
+      .setExecute(async data => data.interaction.reply({
+        files: [
+          new AttachmentBuilder((data.interaction.targetMember || data.interaction.targetUser).displayAvatarURL({
+            size: 1024
+          }))
+        ]
+      })),
 
-        // Send !test to execute command
-        new MessageCommandBuilder()
-            .setName(`test`)
-            .setDescription(`Test message command`)
-            .setAliases(`t`)
-            .setExecute(async data => data.message.reply(`Test message command`)),
+    // Send !ping to execute command
+    new MessageCommandBuilder()
+      .setName(`ping`)
+      .setAliases(`p`)
+      .setDescription(`Ping command`)
+      .setExecute(async data => data.message.reply(`Pong!`)),
 
-        // Use /test to execute command
-        new SlashCommandBuilder()
-            .setName(`test`)
-            .setDescription(`Test slash command`)
-            .setExecute(async data => data.interaction.reply(`Test slash command`))
-    ],
+    // Use /ping to execute command
+    new SlashCommandBuilder()
+      .setName(`ping`)
+      .setDescription(`Pong command`)
+      .setExecute(async data => data.interaction.reply(`Pong!`))
+  ],
 
-    // Module resolved logic here (Bot not logged in)
-    onStart(client) {
-        return true;
-    },
+  /** 
+   * @param {import('reciple').RecipleClient} client
+   */
+  onStart(client) {
+    return true;
+  },
 
-    // Module loaded logic here (Bot logged in)
-    onLoad(client, module) {},
+  /** 
+   * @param {import('reciple').RecipleClient} client
+   * @param {import('reciple').RecipleModule} module
+   */
+  onLoad(client, module) { },
 
-    // Unload logic here
-    onUnload({ reason, client }) {}
+  /** 
+   * @param {import('reciple').RecipleModuleScriptUnloadData} client
+   */
+  onUnload(data) { }
 };
